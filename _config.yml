@@ -1,51 +1,51 @@
 # main text of home
-name: John Doe
-bio: 'A Man who travels the world eating noodles'
+name: Sayak Biswas
+bio: 'Graduate Student | Software Engineer | Music Lover'
 
 # if it's an external image, update below for true
 external-image: false
 picture: 'assets/images/profile.jpg'
 
-url: http://koppl.in/indigo
+url: http://sayakbiswas.github.io
 # your url: http://USERNAME.github.io
 
-permalink: /:title/
+permalink: /:year/:month/:day/:title/
 
 markdown: kramdown
 highlighter: rouge
 
 # To enable google analytics, supply your token below
-# analytics-google: 'UA-MYANALYTICS'
+analytics-google: 'UA-75862970-1'
 
 # To enable piwik tracking, supply your url & site ID below
 # analytics-piwik-url: 'piwik.my-host.com'
 # analytics-piwik-id: 1
 
 # if you don't want comments in your posts, set to false
-disqus: mydisqus
+disqus: sayakbiswas
 
 # if you don't have any of social below, comment the line
-facebook: myfacebook
-twitter: mytwitter
-# google: mygoogle
+facebook: armageddon10
+twitter: armageddon09
+google: +SayakBiswas14
 # instagram: myinstagram
 # pinterest: mypinterest
-# linkedin: mylinkedin
-youtube: myyoutube
-spotify: myspotify
-github: mygithub
-medium: medium
-vimeo: myvimeo
-email: myemail@gmail.com
+linkedin: sayakbiswas
+youtube: +SayakBiswas14
+spotify: 225fpxwzs53eqthyybhm6vysy
+github: sayakbiswas
+# medium: medium
+# vimeo: myvimeo
+email: sayak90@gmail.com
 
 # do you want a larger site? change the option below
 # options: [normal, large] | default: normal
 # normal = 560px / large = 810px
-width: normal
+width: large
 
 # if you don't need pagination, comment the *paginate* configs below
-# paginate: 5
-# paginate_path: "blog/:num/"
+paginate: 5
+paginate_path: "blog/:num/"
 
 # if you don't need projects, comment the *projects* configs below
 projects: true
