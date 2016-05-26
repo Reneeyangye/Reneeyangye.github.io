@@ -16,6 +16,6 @@ blog: true
 ---
 
 Here is a collage of various KDE 4 screenshots from my laptop:
-[![Screenshots.jpg (1.7 MB)](http://a.imagehost.org/t/0063/Screenshots.jpg)](http://a.imagehost.org/view/0063/Screenshots)
+http://a.imagehost.org/view/0063/Screenshots
 
 Enjoy. :)
