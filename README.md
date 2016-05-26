@@ -1,4 +1,4 @@
-## My Personal Website. <a href="http://sayakbiswas.github.io/">Here!</a>
+## My Personal Website. <a href="http://sayakbiswas.github.io/">Here!</a> [![Build Status](https://travis-ci.org/sayakbiswas/sayakbiswas.github.io.svg?branch=master)](https://travis-ci.org/sayakbiswas/sayakbiswas.github.io)
 
 <p align="center">This is a repository for my personal website. This will also hold my blog migrated from sayakbiswas.wordpress.com.
 This site is based on the brilliantly minimalist <a href="https://github.com/sergiokopplin/indigo">Indigo theme</a> by <a href="https://github.com/sergiokopplin">Kopplin</a></p>
