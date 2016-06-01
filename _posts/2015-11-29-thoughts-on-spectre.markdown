@@ -6,6 +6,8 @@ excerpt: My review of the latest James Bond movie - Spectre
 layout: post
 slug: thoughts-on-spectre
 title: "Thoughts on Spectre"
+image: /assets/images/post-images/bond-carousel-spectre.png
+headerImage: true
 wordpress_id: 401
 categories:
 - Movies
