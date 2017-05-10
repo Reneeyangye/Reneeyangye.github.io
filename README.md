@@ -19,10 +19,8 @@ This site is based on the brilliantly minimalist <a href="https://github.com/ser
 1. Clone repo.
 2. Install Jekyll, NodeJS and Bundler.
 3. `bundle install`
-4. `npm install`
-5. `npm install -g gulp`
-6. `gulp`
-7. Pages served on http://localhost:3000
+4. `bundle exec jekyll serve --config _config.yml,_config-dev.yml`
+5. Site can be viewed at `http://localhost:4000`
 
 ## License
 
