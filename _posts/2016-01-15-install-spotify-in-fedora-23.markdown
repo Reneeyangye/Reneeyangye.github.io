@@ -6,10 +6,7 @@ layout: post
 slug: install-spotify-in-fedora-23
 title: "Install Spotify in Fedora 23"
 wordpress_id: 493
-categories:
-- Fedora
-- How To
-- linux
+category: blog
 tag:
 - Fedora
 - spotify

@@ -6,9 +6,7 @@ layout: post
 slug: chrome-on-ubuntu-9-10
 title: "Chrome on Ubuntu 9.10"
 wordpress_id: 121
-categories:
-- linux
-- Ubuntu
+category: blog
 tag:
 - '9.10'
 - chromium
@@ -23,7 +21,7 @@ blog: true
 In my previous post, I gave a how-to of installing Chromium browser(development version of Google Chrome) on Arch Linux. In this post I'll show you how to install Chromium on Ubuntu 9.10(Karmic Koala).
 
 1. Go to System->Administration->Software Sources. Go to tab "Other Software".
-	
+
 2. Click Add. In 'APT Line' paste the following:
 
 		deb http://ppa.launchpad.net/chromium-daily/ppa/ubuntu karmic main

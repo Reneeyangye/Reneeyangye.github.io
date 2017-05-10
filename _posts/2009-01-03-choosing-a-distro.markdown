@@ -6,8 +6,7 @@ layout: post
 slug: choosing-a-distro
 title: "Choosing a Distro........"
 wordpress_id: 33
-categories:
-- linux
+category: blog
 tag:
 - linux
 - distro

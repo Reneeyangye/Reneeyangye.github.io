@@ -6,8 +6,7 @@ layout: post
 slug: added-a-new-category
 title: "Added a new category.."
 wordpress_id: 75
-categories:
-- Blog
+category: blog
 tag:
 - Blog
 blog: true

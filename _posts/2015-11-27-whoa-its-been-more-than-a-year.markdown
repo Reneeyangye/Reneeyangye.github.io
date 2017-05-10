@@ -6,8 +6,7 @@ layout: post
 slug: whoa-its-been-more-than-a-year
 title: "Whoa..it's been more than a year!"
 wordpress_id: 226
-categories:
-- Life
+category: blog
 tag:
 - Life
 blog: true

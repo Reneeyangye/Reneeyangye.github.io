@@ -6,9 +6,7 @@ layout: post
 slug: google-chrome-on-arch
 title: "Google Chrome on Arch.."
 wordpress_id: 118
-categories:
-- Arch
-- linux
+category: blog
 tag:
 - Arch
 - linux

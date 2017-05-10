@@ -6,8 +6,7 @@ layout: post
 slug: font-appearance-in-windows-xp
 title: "Font Appearance in Windows XP..."
 wordpress_id: 79
-categories:
-- Windows XP Tips
+category: blog
 tag:
 - Windows
 - XP

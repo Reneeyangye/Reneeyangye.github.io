@@ -6,8 +6,7 @@ layout: post
 slug: playing-mp3-files-with-java
 title: "Playing MP3 files with java..."
 wordpress_id: 210
-categories:
-- Programming
+category: blog
 tag:
 - Programming
 - Java

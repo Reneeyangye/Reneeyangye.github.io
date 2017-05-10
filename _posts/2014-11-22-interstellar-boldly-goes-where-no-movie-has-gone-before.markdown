@@ -6,8 +6,7 @@ layout: post
 slug: interstellar-boldly-goes-where-no-movie-has-gone-before
 title: "Interstellar - Boldly goes where no movie has gone before"
 wordpress_id: 223
-categories:
-- Movies
+category: blog
 tag:
 - Interstellar
 - Movies

@@ -6,13 +6,11 @@ layout: post
 slug: hello-world
 title: "Hello world!"
 wordpress_id: 1
-categories:
-- Blog
-- Life
 tag:
 - Blog
 - Life
 blog: true
+category: blog
 ---
 
 Hi Everybody!!

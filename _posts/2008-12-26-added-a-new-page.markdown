@@ -6,8 +6,7 @@ layout: post
 slug: added-a-new-page
 title: "I'm back........"
 wordpress_id: 13
-categories:
-- Life
+category: blog
 tag:
 - Life
 blog: true

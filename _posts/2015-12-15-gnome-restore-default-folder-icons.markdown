@@ -6,12 +6,7 @@ layout: post
 slug: gnome-restore-default-folder-icons
 title: "GNOME - Restore default folder icons"
 wordpress_id: 468
-categories:
-- Fedora
-- Fix
-- GNOME
-- Issue
-- linux
+category: blog
 tag:
 - default icons
 - GNOME 3
@@ -31,7 +26,7 @@ You know how the Documents, Music, Pictures and Videos folders all have speciali
 # Format is XDG_xxx_DIR="$HOME/yyy", where yyy is a shell-escaped
 # homedir-relative path, or XDG_xxx_DIR="/yyy", where /yyy is an
 # absolute path. No other format is supported.
-# 
+#
 XDG_DESKTOP_DIR="$HOME/Desktop"
 XDG_DOWNLOAD_DIR="$HOME/Downloads"
 XDG_TEMPLATES_DIR="$HOME/Templates"

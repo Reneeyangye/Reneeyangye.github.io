@@ -9,10 +9,7 @@ title: "Fedora 23 Workstation"
 image: /assets/images/post-images/23-release-945x400.jpg
 headerImage: true
 wordpress_id: 271
-categories:
-- Fedora
-- linux
-- Review
+category: blog
 tag:
 - Fedora
 - Fedora 23

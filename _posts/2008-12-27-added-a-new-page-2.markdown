@@ -6,8 +6,7 @@ layout: post
 slug: added-a-new-page-2
 title: "Added a New Page....."
 wordpress_id: 30
-categories:
-- Blog
+category: blog
 tag:
 - Blog
 blog: true

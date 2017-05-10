@@ -6,8 +6,7 @@ layout: post
 slug: html-entities
 title: "HTML Entities........"
 wordpress_id: 184
-categories:
-- HTML
+category: blog
 tag:
 - HTML
 blog: true

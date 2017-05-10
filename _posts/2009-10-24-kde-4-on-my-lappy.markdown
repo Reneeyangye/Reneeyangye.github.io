@@ -6,8 +6,7 @@ layout: post
 slug: kde-4-on-my-lappy
 title: "KDE 4 on my Lappy..."
 wordpress_id: 115
-categories:
-- linux
+category: blog
 tag:
 - linux
 - kde

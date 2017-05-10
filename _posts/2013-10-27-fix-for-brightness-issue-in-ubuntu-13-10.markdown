@@ -6,8 +6,7 @@ layout: post
 slug: fix-for-brightness-issue-in-ubuntu-13-10
 title: "Fix for brightness issue in Ubuntu 13.10"
 wordpress_id: 219
-categories:
-- Ubuntu
+category: blog
 tag:
 - brightness
 - brightness fix

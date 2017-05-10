@@ -6,9 +6,7 @@ layout: post
 slug: set-up-cc-environment-with-vim-mingw
 title: "Set up C/C++ environment with vim & mingw"
 wordpress_id: 204
-categories:
-- Programming
-- Windows
+category: blog
 tag:
 - Programming
 - Windows

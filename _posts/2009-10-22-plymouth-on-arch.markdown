@@ -6,9 +6,7 @@ layout: post
 slug: plymouth-on-arch
 title: "Plymouth on Arch"
 wordpress_id: 112
-categories:
-- Arch
-- linux
+category: blog
 tag:
 - Arch
 - linux

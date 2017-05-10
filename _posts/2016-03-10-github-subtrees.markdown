@@ -7,14 +7,7 @@ layout: post
 slug: github-subtrees
 title: "GitHub Subtrees"
 wordpress_id: 525
-categories:
-- Git
-- GitHub
-- How To
-- Issue
-- linux
-- Programming
-- Version Control
+category: blog
 tag:
 - git subtree
 - GitHub
@@ -32,17 +25,17 @@ The workflow as I understand it is as below:
 
 
 
-	
+
   1. I created a repository called `advanced-data-structures`. This is my main repository.
 
-	
+
   2. Then I created another repository called `RedBlackEventCounter`. This holds the actual project code. Made changes, committed and pushed to this remote.
 
-	
+
   3. Then I added the remote of `RedBlackEventCounter` to the master of `advanced-data-structures`.
 
 				git remote add -f RedBlackEventCounter https://github.com/sayakbiswas/RedBlackEventCounter.git
-		
+
   4. Merged `RedBlackEventCounter` into `advanced-data-structures`.
 
 				git merge -s ours --no-commit RedBlackEventCounter/master
@@ -50,9 +43,9 @@ The workflow as I understand it is as below:
   5. Copied the git data of `RedBlackEventCounter` repository into a new directory in the `advanced-data-structures` repository.
 
 				git read-tree --prefix=RedBlackEventCounter/ -u RedBlackEventCounter/master
-	
+
   6. Commit and push the changes.
-				
+
 				git commit -m "Added RedBlackEventCounter reference into advanced-data-structures"
 				git push origin master
 

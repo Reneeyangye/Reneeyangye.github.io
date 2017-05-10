@@ -6,9 +6,7 @@ layout: post
 slug: f23-printing-and-scanning
 title: "F23 - Printing and Scanning"
 wordpress_id: 440
-categories:
-- Fedora
-- linux
+category: blog
 tag:
 - Fedora 23
 - hp printer

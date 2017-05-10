@@ -6,8 +6,7 @@ layout: post
 slug: im-an-scjp
 title: "I'm an SCJP.... :)"
 wordpress_id: 89
-categories:
-- Life
+category: blog
 tag:
 - Life
 - SCJP

@@ -6,9 +6,7 @@ layout: post
 slug: increased-boot-up-speed
 title: "Increased Boot-Up Speed...."
 wordpress_id: 99
-categories:
-- Arch
-- linux
+category: blog
 tag:
 - Arch
 - linux

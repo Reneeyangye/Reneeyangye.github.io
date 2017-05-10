@@ -6,8 +6,7 @@ layout: post
 slug: fix-hybrid-graphics-high-power-consumption-and-overheating
 title: "Fix Hybrid Graphics high power consumption and overheating"
 wordpress_id: 207
-categories:
-- Ubuntu
+category: blog
 tag:
 - Ubuntu
 - Hybrid Graphics

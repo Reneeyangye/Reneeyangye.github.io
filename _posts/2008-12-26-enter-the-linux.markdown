@@ -6,8 +6,7 @@ layout: post
 slug: enter-the-linux
 title: "Enter The Linux..."
 wordpress_id: 15
-categories:
-- linux
+category: blog
 tag:
 - intro
 - linux

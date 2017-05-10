@@ -6,11 +6,10 @@ layout: post
 slug: incomingexams
 title: "Incoming.......Exams!!"
 wordpress_id: 8
-categories:
-- Life
 tag:
 - Life
 blog: true
+category: blog
 ---
 
 Well....I've my Exams from Wednesday! So, I won't be available this week. Really, man, I hate these Exams. I don't know why do we have to give these exams??!!

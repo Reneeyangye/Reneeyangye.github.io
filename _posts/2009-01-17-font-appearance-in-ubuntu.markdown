@@ -6,9 +6,7 @@ layout: post
 slug: font-appearance-in-ubuntu
 title: "Font Appearance in Ubuntu..."
 wordpress_id: 84
-categories:
-- linux
-- Ubuntu
+category: blog
 tag:
 - linux
 - Ubuntu

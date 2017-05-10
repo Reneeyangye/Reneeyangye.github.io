@@ -7,10 +7,7 @@ layout: post
 slug: fedora-23-and-screen-tearing
 title: "Fedora 23 and screen tearing"
 wordpress_id: 422
-categories:
-- Fedora
-- Issue
-- linux
+category: blog
 tag:
 - Fedora
 - Fedora 23

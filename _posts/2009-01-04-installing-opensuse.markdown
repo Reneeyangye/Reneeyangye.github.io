@@ -6,9 +6,7 @@ layout: post
 slug: installing-opensuse
 title: "Installing openSUSE....."
 wordpress_id: 43
-categories:
-- linux
-- openSUSE
+category: blog
 tags:
 - install
 - linux
@@ -54,7 +52,7 @@ Click Next.
 10. Click Install for a final confirmation of your installation.
 ![install-61](http://sayakbiswas.github.io/assets/images/post-images/install-61.png)
 
-11. Now grab a cup of coffee/tea and listen to some music as you leave the computer on its own to do the installation. 
+11. Now grab a cup of coffee/tea and listen to some music as you leave the computer on its own to do the installation.
 ![install-72](http://sayakbiswas.github.io/assets/images/post-images/install-72.png)
 
 12.![install-83](http://sayakbiswas.github.io/assets/images/post-images/install-83.png)

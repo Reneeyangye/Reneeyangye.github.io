@@ -6,9 +6,7 @@ layout: post
 slug: installed-arch-linux
 title: "Installed Arch Linux...."
 wordpress_id: 91
-categories:
-- Arch
-- linux
+category: blog
 tag:
 - Arch
 - linux

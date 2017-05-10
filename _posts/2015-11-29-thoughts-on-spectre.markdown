@@ -9,9 +9,7 @@ title: "Thoughts on Spectre"
 image: /assets/images/post-images/bond-carousel-spectre.png
 headerImage: true
 wordpress_id: 401
-categories:
-- Movies
-- Review
+category: blog
 tag:
 - Bond
 - Bond 24
