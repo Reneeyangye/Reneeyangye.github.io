@@ -11,12 +11,14 @@ layout: page
 <h2>Skills</h2>
 
 <ul class="skill-list">
-	<li>Java/JEE and C</li>
+	<li>Java/JEE and C/C++</li>
 	<li>HTML5/CSS3 and Frameworks(jQuery Mobile and Bootstrap)</li>
 	<li>Javascript and jQuery</li>
 	<li>Git</li>
 	<li>IBM WebSphere Portal</li>
 	<li>Unity 3D and Google Cardboard SDK</li>
+	<li>Unreal Engine 4</li>
+	<li>OpenGL</li>
 	<li>Highcharts API</li>
 	<li>REST based services using Jersey API</li>
 	<li>A little knowledge of Rally SDK</li>
