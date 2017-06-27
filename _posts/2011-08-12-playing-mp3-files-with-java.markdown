@@ -23,7 +23,7 @@ Create an instance of the Player class while providing a FileInputStream object 
 
 Below is a very basic implementation of the playback process:
 
-{% highlight java %}
+```java
 import java.io.*;
 import javazoom.jl.player.Player;
 
@@ -39,4 +39,4 @@ public class JavaPlayerTest {
 		}
 	}
 }
-{% endhighlight %}
+```
