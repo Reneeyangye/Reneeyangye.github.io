@@ -2,7 +2,7 @@
 title: About
 layout: page
 ---
-![Profile Image]({{ site.url }}/{{ site.picture }})
+![Profile Image]({{ site.url }}/{{ site.picture-profile }})
 
 <p>Hi! I am <span class="emphasize">Yang Ye</span>. I am currently a final-year Ph.D. student in the <a href="https://www.sdsc.cityu.edu.hk/">School of Data Science</a> at <a href="https://www.cityu.edu.hk/">the City University of Hong Kong</a>, under the direction of <a href="http://www.cityu.edu.hk/stfprofile/zhang.htm">Prof. Qingpeng Zhang</a>. I received the B.S. degree in Logistics Management from <a href="http://english.hust.edu.cn/">Huazhong University of Science and Technology</a> in 2019.</p>
 
