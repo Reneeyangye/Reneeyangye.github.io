@@ -18,6 +18,11 @@ layout: page
 	<li><a href="mailto: yang.ye@my.cityu.edu.hk">Email</a></li>
 </ul>
 
+<h2>Experience</h2>
+<ul>
+	<li>Visiting Scholar, <a href="https://globalhealth.unc.edu/china/">UNC Project-China</a>, 2021.07 - 2021.09.</li>
+</ul>
+
 <h2> Scholarships and Awards </h2>
 
 <ul>
