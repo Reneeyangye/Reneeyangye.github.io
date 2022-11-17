@@ -1,20 +1,21 @@
 # main text of home
-name: Sayak Biswas
-bio: 'Graduate Student | Software Engineer | Music Lover'
+name: Yang Ye
+bio: 'PhD Candidate@CityU'
 
 # twitter summary info
-description: Tidbits on tech stuff and whatever else
+# description: Tidbits on tech stuff and whatever else
 
 # if it's an external image, update below for true
 # better with square images
 external-image: false
-picture: assets/images/profile.jpg
+picture: assets/images/profile.jpeg
+picture-face: assets/images/face.jpeg
 
 # If you want to include your resume, set to true
 # and specify source (external or local).
 resume: true
-resume-external: true
-resume-url: https://drive.google.com/file/d/0B_KA4gyRY_9nbERFSGJReVh0T3c/view?usp=sharing
+resume-external: false
+resume-url: assets/cv.pdf
 
 # your url: http://USERNAME.github.io
 url: http://Reneeyangye.github.io
@@ -30,22 +31,22 @@ analytics-google: 'UA-75862970-1'
 
 # if you don't want comments in your posts, leave categories empty
 disqus:
-  shortname: sayakbiswas # enter this from your disqus account
+  shortname: yangye # enter this from your disqus account
   categories: [blog, project] # only show disqus for posts that have these categories
 
 # if you don't have any of social below, comment the line
-facebook: armageddon10
-twitter: armageddon09
-google: SayakBiswas14
+#facebook: armageddon10
+#twitter: armageddon09
+google: yangye
 # instagram: myinstagram
 # pinterest: mypinterest
-linkedin: sayakbiswas
-youtube: +SayakBiswas14
-spotify: 225fpxwzs53eqthyybhm6vysy
-github: sayakbiswas
+#linkedin: sayakbiswas
+#youtube: +SayakBiswas14
+#spotify: 225fpxwzs53eqthyybhm6vysy
+github: jianan0099
 # medium: medium
 # vimeo: myvimeo
-email: sayak90@gmail.com
+email: yang.ye@my.cityu.edu.hk
 # lastfm: mylastfm
 # stackoverflow: 7044681/mystackoverflow
 # quora: userquora
@@ -54,12 +55,12 @@ email: sayak90@gmail.com
 # vimeo: myvimeo
 
 authors:
-    sayakbiswas:
-        name: Sayak Biswas
-        bio: 'Graduate Student | Software Engineer | Music Lover'
+    yangye:
+        name: Yang Ye
+        bio: 'PhD Candidate@CityU'
         external-image: false
-        picture: assets/images/profile.jpg
-        twitter: armageddon09
+        picture: assets/images/profile.jpeg
+        #twitter: armageddon09
 
 # do you want a larger site? change the option below
 # options: [normal, large] | default: normal
