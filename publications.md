@@ -2,7 +2,7 @@
 title: Publications
 layout: page
 ---
-![Profile Image]({{ site.url }}/{{ site.picture }})
 
-## paper
 
+# Publications
+denotes first/co-first authorship
