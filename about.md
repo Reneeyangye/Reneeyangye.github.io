@@ -8,6 +8,15 @@ layout: page
 
 <p>My research interests lie at the intersection of complex networks and mathematical epidemiology. I have been working on developing mathematical and computational models to investigate infectious disease dynamics, predict the course of epidemics, and inform public health policies based on real-world and hypothetical networks. My research has been published in reputable journals such as Nature Human Behaviour, Physical Review E, and Philosophical Transactions of the Royal Society A, as well as featured in press such as The Washington Post and The Guardian.</p>
 
+<h2>Contact</h2>
+
+<ul>
+	<li><a href="https://scholar.google.com/citations?hl=zh-CN&user=cSyfjVkAAAAJ">Google Scholar</a></li>
+	<li><a href="https://scholars.cityu.edu.hk/en/persons/yang-ye(8b926a7c-8c3d-476c-bd9d-983a54087cdf).html">CityU Scholars</a></li>
+	<li><a href="https://github.com/jianan0099">GitHub</a></li>
+	<li><a href="https://orcid.org/0000-0003-0710-1341">ORCID</a></li>
+	<li><a href="mailto: yang.ye@my.cityu.edu.hk">Email</a></li>
+</ul>
 
 <h2>Skills</h2>
 
@@ -24,13 +33,4 @@ layout: page
 	<li>REST based services using Jersey API</li>
 	<li>A little knowledge of Rally SDK</li>
 	<li>Oracle SQL and a little bit of MongoDB</li>
-</ul>
-
-<h2>Projects</h2>
-
-<ul class="project-list">
-	<li><a href="https://github.com/sayakbiswas/Procrastination-VR">Procrastination VR</a></li>
-	<li><a href="https://github.com/sayakbiswas/inside-paintings-vr">Inside Paintings VR</a></li>
-	<li><a href="https://github.com/spandananitdgp/Egyptian-Mummification-VR-Experience">Egyptian Mummification VR Experience</a></li>
-	<li><a href="https://github.com/sayakbiswas/VR-Wars">VR Wars</a></li>
 </ul>
