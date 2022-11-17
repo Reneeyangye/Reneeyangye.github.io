@@ -6,10 +6,7 @@ layout: page
 
 <p>Hi! I am <span class="emphasize">Yang Ye</span>. I am currently a final-year Ph.D. student in the <a href="https://www.sdsc.cityu.edu.hk/">School of Data Science</a> at <a href="https://www.cityu.edu.hk/">City University of Hong Kong</a>, under the direction of <a href="http://www.cityu.edu.hk/stfprofile/zhang.htm">Prof. Qingpeng Zhang</a>. I received the B.S. degree in logistics management from Huazhong University of Science and Technology in 2019.</p>
 
-<p>My research interests include complex networks and mathematical epidemiology. I have been working on developing mathematical and computational models on real-world and synthetic networks to 
-	(1) investigate infectious disease dynamics, project potential epidemic outcomes, and inform public health policies at different scales, ranging from individuals to nations, and 
-	(2) explore the interactions between epidemics, social interactions, and economics. 
-My work is a combination of mathematical modelling, agent-based simulations, and equation-based simulations.</p>
+<p>My research interests include complex networks and mathematical epidemiology. I have been working on developing mathematical and computational models to investigate infectious disease dynamics, project potential epidemic outcomes, and inform public health policies at different scales based on real-world and hypothetical networks. My research has been published in Nature Human Behaviour, Physical Review E, Philosophical Transactions of the Royal Society A, and others.</p>
 
 
 <h2>Skills</h2>
