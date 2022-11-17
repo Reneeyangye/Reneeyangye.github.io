@@ -4,9 +4,9 @@ layout: page
 ---
 ![Profile Image]({{ site.url }}/{{ site.picture }})
 
-<p>Hi! I am <span class="emphasize">Yang Ye</span>. I am currently a final-year Ph.D. student in the <a href="https://www.sdsc.cityu.edu.hk/">School of Data Science</a> at <a href="https://www.cityu.edu.hk/">City University of Hong Kong</a>, under the direction of <a href="http://www.cityu.edu.hk/stfprofile/zhang.htm">Prof. Qingpeng Zhang</a>. I received the B.S. degree in logistics management from Huazhong University of Science and Technology in 2019.</p>
+<p>Hi! I am <span class="emphasize">Yang Ye</span>. I am currently a final-year Ph.D. student in the <a href="https://www.sdsc.cityu.edu.hk/">School of Data Science</a> at <a href="https://www.cityu.edu.hk/">City University of Hong Kong</a>, under the direction of <a href="http://www.cityu.edu.hk/stfprofile/zhang.htm">Prof. Qingpeng Zhang</a>. I received the B.S. degree in logistics management from <a href="http://english.hust.edu.cn/">Huazhong University of Science and Technology</a> in 2019.</p>
 
-<p>My research interests include complex networks and mathematical epidemiology. I have been working on developing mathematical and computational models to investigate infectious disease dynamics, project potential epidemic outcomes, and inform public health policies at different scales based on real-world and hypothetical networks. My research has been published in Nature Human Behaviour, Physical Review E, Philosophical Transactions of the Royal Society A, and others.</p>
+<p>My research interests lie at the intersection of complex networks and mathematical epidemiology. I have been working on developing mathematical and computational models to investigate infectious disease dynamics, project potential epidemic outcomes, and inform public health policies at different scales based on real-world and hypothetical networks. My research has been published in reputable journals such as Nature Human Behaviour, Physical Review E, and Philosophical Transactions of the Royal Society A, as well as featured in press such as The Washington Post and The Guardian.</p>
 
 
 <h2>Skills</h2>
