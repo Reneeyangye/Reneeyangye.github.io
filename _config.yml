@@ -33,6 +33,9 @@ analytics-google: 'UA-75862970-1'
 disqus:
   shortname: yangye # enter this from your disqus account
   categories: [blog, project] # only show disqus for posts that have these categories
+
+plugins:
+  - jekyll/scholar
   
 scholar:
 
