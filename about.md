@@ -18,19 +18,16 @@ layout: page
 	<li><a href="mailto: yang.ye@my.cityu.edu.hk">Email</a></li>
 </ul>
 
-<h2>Skills</h2>
+<h2> Scholarships and Awards </h2>
 
-<ul class="skill-list">
-	<li>Java/JEE and C/C++</li>
-	<li>HTML5/CSS3 and Frameworks(jQuery Mobile and Bootstrap)</li>
-	<li>Javascript and jQuery</li>
-	<li>Git</li>
-	<li>IBM WebSphere Portal</li>
-	<li>Unity 3D and Google Cardboard SDK</li>
-	<li>Unreal Engine 4</li>
-	<li>OpenGL</li>
-	<li>Highcharts API</li>
-	<li>REST based services using Jersey API</li>
-	<li>A little knowledge of Rally SDK</li>
-	<li>Oracle SQL and a little bit of MongoDB</li>
+<ul>
+	<li>Outstanding Academic Performance Award for Research Degree Students, CityU, 2021, 2022.</li>
+	<li>Research Tuition Scholarship, CityU, 2021, 2022.</li>
+	<li>China National Scholarship (top 0.2% nationwide), HUST, 2016, 2017.</li>
+</ul>
+
+<h2> Media Coverage </h2>
+
+<ul>
+	<li>"Répartition des vaccins dans le monde."<a href="https://ici.radio-canada.ca/recit-numerique/4775/covax-repartition-mondiale-vaccins-injustice">CBC/Radio-Canada.</a> 2022.10</li>
 </ul>
