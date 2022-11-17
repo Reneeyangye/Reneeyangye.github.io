@@ -6,7 +6,11 @@ layout: page
 
 <p>Hi! I am <span class="emphasize">Yang Ye</span>. I am currently a final-year Ph.D. student in the <a href="https://www.sdsc.cityu.edu.hk/">School of Data Science</a> at <a href="https://www.cityu.edu.hk/">City University of Hong Kong</a>, under the direction of <a href="http://www.cityu.edu.hk/stfprofile/zhang.htm">Prof. Qingpeng Zhang</a>. I received the B.S. degree in logistics management from Huazhong University of Science and Technology in 2019.</p>
 
-<p>I am from a nice little town in India called <span class="emphasize">Siliguri</span>. These days, I stay in Gainesville. I really like coding, reading novels, playing computer games and listening to music. I generally like reading thriller and science fiction novels. That being said, one of my favorite books is <span class="emphasize">Steve Jobs</span> by Walter Isaacson. I love playing RPGs and I think the <span class="emphasize">Mass Effect series</span> is the second greatest entertainment trilogy ever created(first being The Dark Knight trilogy by Chris Nolan). I even loved ME3's ending, so there you go! When it comes to music, I would call myself a music junkie. I go to sleep and wake up with the earphones jacked in. I am really into rock 'n roll. My favorite bands are <span class="emphasize">U2</span>, Muse, Linkin Park, 30 Seconds to Mars in that order. Seeing U2 perform live has been a long time dream of mine.</p>
+<p>My research interests include complex networks and mathematical epidemiology. I have been working on developing mathematical and computational models on real-world and synthetic networks to 
+	(1) investigate infectious disease dynamics, project potential epidemic outcomes, and inform public health policies at different scales, ranging from individuals to nations, and 
+	(2) explore the interactions between epidemics, social interactions, and economics. 
+My work is a combination of mathematical modelling, agent-based simulations, and equation-based simulations.</p>
+
 
 <h2>Skills</h2>
 
