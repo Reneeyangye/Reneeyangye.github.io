@@ -29,5 +29,10 @@ layout: page
 <h2> Media Coverage </h2>
 
 <ul>
-	<li>"Répartition des vaccins dans le monde."<a href="https://ici.radio-canada.ca/recit-numerique/4775/covax-repartition-mondiale-vaccins-injustice">CBC/Radio-Canada.</a> 2022.10</li>
+<li>"Répartition des vaccins dans le monde." <a href="https://ici.radio-canada.ca/recit-numerique/4775/covax-repartition-mondiale-vaccins-injustice">CBC/Radio-Canada</a>, <a href="https://www.youtube.com/watch?v=RQTOj3ulBbU">Youtube version</a>, 2022.10.</li>
+<li>"The benefits of vaccinating the world are clear. The catch is the price tag." <a href="https://www.washingtonpost.com/world/2022/02/10/coronavirus-vaccine-price-mrna/">The Washington Post</a>, 2022.02.</li>
+<li>"World better protected against Covid if rich nations donated 50% of vaccines to low-income countries." <a href="https://www.theguardian.com/australia-news/2022/feb/01/world-better-protected-against-covid-if-rich-nations-donated-50-of-vaccines-to-low-income-countries">The Guardian</a>, 2022.02.</li>
+<li>"COVID-19: 46% vaccine redistribution best for high- and low-income countries alike." <a href="https://ici.radio-canada.ca/recit-numerique/4775/covax-repartition-mondiale-vaccins-injustice">Nature Asia</a> and <a href="https://www.nature.com/articles/s41562-022-01289-8/metrics">others</a>, 2022.02</li.>
+<li>"Enhanced vaccine donation drive can end COVID-19 pandemic." <a href="https://www.cityu.edu.hk/media/news/2022/02/28/enhanced-vaccine-donation-drive-can-end-covid-19-pandemic">CityU News</a>, 2022.02</li>
+<li>"Mathematical model verifies a correct understanding of epidemic’s severity facilitates disease control." <a href="https://phys.org/news/2021-01-mathematical-epidemic-severity.html">PhysOrg</a>, 2021.01; <a href="https://www.cityu.edu.hk/research/stories/2020/12/10/mathematical-model-verifies-correct-understanding-epidemics-severity-facilitates-disease-control">CityU Research Stories</a>, 2020.12.</li>
 </ul>
