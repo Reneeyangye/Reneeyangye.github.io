@@ -8,7 +8,7 @@ bio: 'PhD Candidate@CityU'
 # if it's an external image, update below for true
 # better with square images
 external-image: false
-picture: assets/images/face.jpeg
+picture: assets/images/profile.jpeg
 picture-profile: assets/images/profile.jpeg
 
 # If you want to include your resume, set to true
