@@ -10,6 +10,7 @@ layout: page
 
 <h2>Peer-Reviewed Journals</h2> 
 <ul>
+    <li><b>Cheng, W., Zhou, H., <b>Ye, Y.</b>, Chen, Y., Jing, F., Cao, Z., Zeng, D. D., & Zhang, Q. (2022). Future Trajectory of Respiratory Infections Following the COVID-19 Pandemic in Hong Kong. Chaos: An Interdisciplinary Journal of Nonlinear Science (in press). </li>
     <li><b>Ye, Y.</b>, Ni, K., Jing, F., Zhou, Y., Tang, W., & Zhang, Q. (2022). Model-Informed Targeted Network Interventions on Social Networks Among Men Who Have Sex With Men in Zhuhai, China. IEEE Transactions on Computational Social Systems. <a href="https://ieeexplore.ieee.org/abstract/document/9940227">Paper</a>. </li>
     <li><b>Ye, Y.</b>, Zhang, Q., Cao, Z., Chen, F. Y., Yan, H., Stanley, H. E., & Zeng, D. D. (2022). Impacts of Export Restrictions on the Global Personal Protective Equipment Trade Network During COVID‐19. Advanced Theory and Simulations, 5(4), 2100352. <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/adts.202100352">Paper</a>. </li>
     <li><b>Ye, Y.</b>, Zhang, Q., Wei, X., Cao, Z., Yuan, H. Y., & Zeng, D. D. (2022). Equitable access to COVID-19 vaccines makes a life-saving difference to all countries. Nature Human Behaviour, 6(2), 207-216. <a href="https://www.nature.com/articles/s41562-022-01289-8">Paper</a>. <a href="https://github.com/jianan0099/VacEquity">Code</a>. </li>
