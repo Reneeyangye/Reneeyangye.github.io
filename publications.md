@@ -6,6 +6,7 @@ layout: page
 <h2>Preprints</h2> 
 <ul>
     <li>Jing, F., <b>Ye, Y. (joint first author)</b>, Zhou, Y., Ni, Y., Yan, X., Lu, Y., et al. (2021). Identification of Key Influencers for Secondary Distribution of HIV Self-Testing among Chinese MSM: A Machine Learning Approach. Medrxiv (The Journal of Medical Internet Research, 1st round revision). <a href="https://www.medrxiv.org/content/10.1101/2021.04.19.21255584v1">Paper</a>. </li>
+    <li><b>Ye, Y.</b>, Cao, Z., Zeng, D. D., & Zhang, Q. (2022). Supply chain loss from easing COVID-19 restrictions: an evolutionary epidemiological-economic modeling study. <a href="https://doi.org/10.21203/rs.3.rs-2355650/v1">Paper</a>. </li>
 </ul>
 
 <h2>Peer-Reviewed Journals</h2> 
