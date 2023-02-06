@@ -5,13 +5,14 @@ layout: page
 
 <h2>Preprints</h2> 
 <ul>
-    <li>Jing, F., <b>Ye, Y. (joint first author)</b>, Zhou, Y., Ni, Y., Yan, X., Lu, Y., et al. (2021). Identification of Key Influencers for Secondary Distribution of HIV Self-Testing among Chinese MSM: A Machine Learning Approach. Medrxiv (The Journal of Medical Internet Research, 1st round revision). <a href="https://www.medrxiv.org/content/10.1101/2021.04.19.21255584v1">Paper</a>. </li>
-    <li><b>Ye, Y.</b>, Cao, Z., Zeng, D. D., & Zhang, Q. (2022). Supply chain loss from easing COVID-19 restrictions: an evolutionary epidemiological-economic modeling study. <a href="https://doi.org/10.21203/rs.3.rs-2355650/v1">Paper</a>. </li>
+    <li><b>Ye, Y.</b>, Cao, Z., Zeng, D. D., & Zhang, Q. Supply chain loss from easing COVID-19 restrictions: an evolutionary epidemiological-economic modeling study. <a href="https://doi.org/10.21203/rs.3.rs-2355650/v1">Paper</a>. </li>
+    <li>Jing, F., <b>Ye, Y. (joint first author)</b>, Zhou, Y., Ni, Y., Yan, X., Lu, Y., et al. Identification of Key Influencers for Secondary Distribution of HIV Self-Testing among Chinese MSM: A Machine Learning Approach. <a href="https://www.medrxiv.org/content/10.1101/2021.04.19.21255584v1">Paper</a>. </li>
 </ul>
 
 <h2>Peer-Reviewed Journals</h2> 
 <ul>
-    <li>Cheng, W., Zhou, H., <b>Ye, Y.</b>, Chen, Y., Jing, F., Cao, Z., Zeng, D. D., & Zhang, Q. (2022). Future Trajectory of Respiratory Infections Following the COVID-19 Pandemic in Hong Kong. Chaos: An Interdisciplinary Journal of Nonlinear Science. <a href="https://aip.scitation.org/doi/10.1063/5.0123870">Paper</a>. </li>
+    <li>Liu, W., Pan, J., Zhang, X., Gong, X., <b>Ye, Y.</b>, Zhao, X., et al. (2023). Cross-platform product matching based on entity alignment of knowledge graph with RAEA model. World Wide Web. 10.1007/s11280-022-01134-y. <a href="https://link.springer.com/article/10.1007/s11280-022-01134-y">Paper</a>. </li>
+    <li>Cheng, W., Zhou, H., <b>Ye, Y.</b>, Chen, Y., Jing, F., Cao, Z., Zeng, D. D., & Zhang, Q. (2023). Future Trajectory of Respiratory Infections Following the COVID-19 Pandemic in Hong Kong. Chaos: An Interdisciplinary Journal of Nonlinear Science, 33(1), 013124. <a href="https://aip.scitation.org/doi/10.1063/5.0123870">Paper</a>. </li>
     <li><b>Ye, Y.</b>, Ni, K., Jing, F., Zhou, Y., Tang, W., & Zhang, Q. (2022). Model-Informed Targeted Network Interventions on Social Networks Among Men Who Have Sex With Men in Zhuhai, China. IEEE Transactions on Computational Social Systems. <a href="https://ieeexplore.ieee.org/abstract/document/9940227">Paper</a>. </li>
     <li><b>Ye, Y.</b>, Zhang, Q., Cao, Z., Chen, F. Y., Yan, H., Stanley, H. E., & Zeng, D. D. (2022). Impacts of Export Restrictions on the Global Personal Protective Equipment Trade Network During COVID‐19. Advanced Theory and Simulations, 5(4), 2100352. <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/adts.202100352">Paper</a>. </li>
     <li><b>Ye, Y.</b>, Zhang, Q., Wei, X., Cao, Z., Yuan, H. Y., & Zeng, D. D. (2022). Equitable access to COVID-19 vaccines makes a life-saving difference to all countries. Nature Human Behaviour, 6(2), 207-216. <a href="https://www.nature.com/articles/s41562-022-01289-8">Paper</a>. <a href="https://github.com/jianan0099/VacEquity">Code</a>. </li>
