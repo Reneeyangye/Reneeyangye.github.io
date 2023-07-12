@@ -11,7 +11,7 @@ layout: page
 
 <h2>Peer-Reviewed Journals</h2> 
 <ul>
-    <li>Zhang, Q., <b>Ye, Y. (joint first author)</b>, Zeng, D. D. (2023). Travel restrictions cannot prevent the introduction of new COVID variants. Journal of Travel Medicine. <a href="https://github.com/jianan0099/EffectiveDistance">Code</a>. </li>
+    <li>Zhang, Q., <b>Ye, Y. (joint first author)</b>, Zeng, D. D. (2023). Travel restrictions cannot prevent the introduction of new COVID variants. Journal of Travel Medicine. <a href="https://academic.oup.com/jtm/advance-article-abstract/doi/10.1093/jtm/taad066/7169126?login=true">Paper</a>. <a href="https://github.com/jianan0099/EffectiveDistance">Code</a>. </li>
     <li>Liu, W., Pan, J., Zhang, X., Gong, X., <b>Ye, Y.</b>, Zhao, X., et al. (2023). Cross-platform product matching based on entity alignment of knowledge graph with RAEA model. World Wide Web. 10.1007/s11280-022-01134-y. <a href="https://link.springer.com/article/10.1007/s11280-022-01134-y">Paper</a>. </li>
     <li>Cheng, W., Zhou, H., <b>Ye, Y.</b>, Chen, Y., Jing, F., Cao, Z., Zeng, D. D., & Zhang, Q. (2023). Future Trajectory of Respiratory Infections Following the COVID-19 Pandemic in Hong Kong. Chaos: An Interdisciplinary Journal of Nonlinear Science, 33(1), 013124. <a href="https://aip.scitation.org/doi/10.1063/5.0123870">Paper</a>. </li>
     <li><b>Ye, Y.</b>, Ni, K., Jing, F., Zhou, Y., Tang, W., & Zhang, Q. (2022). Model-Informed Targeted Network Interventions on Social Networks Among Men Who Have Sex With Men in Zhuhai, China. IEEE Transactions on Computational Social Systems. <a href="https://ieeexplore.ieee.org/abstract/document/9940227">Paper</a>. </li>
