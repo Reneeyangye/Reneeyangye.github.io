@@ -15,7 +15,7 @@ layout: page
 	<li><a href="https://scholars.cityu.edu.hk/en/persons/yang-ye(8b926a7c-8c3d-476c-bd9d-983a54087cdf).html">CityU Scholars</a></li>
 	<li><a href="https://github.com/jianan0099">GitHub</a></li>
 	<li><a href="https://orcid.org/0000-0003-0710-1341">ORCID</a></li>
-	<li><a href="mailto: yang.ye@my.cityu.edu.hk">Email</a></li>
+	<li><a href="mailto: yang.ye@yale.edu">Email</a></li>
 </ul>
 
 <h2>Experience</h2>
