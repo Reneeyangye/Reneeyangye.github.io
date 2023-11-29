@@ -6,11 +6,11 @@ layout: page
 <h2>Preprints</h2> 
 <ul>
     <li><b>Ye, Y.</b>, Cao, Z., Zeng, D. D., & Zhang, Q. Supply chain loss from easing COVID-19 restrictions: an evolutionary epidemiological-economic modeling study. <a href="https://doi.org/10.21203/rs.3.rs-2355650/v1">Paper</a>. </li>
-    <li>Jing, F., <b>Ye, Y. (joint first author)</b>, Zhou, Y., Ni, Y., Yan, X., Lu, Y., et al. Identification of Key Influencers for Secondary Distribution of HIV Self-Testing among Chinese MSM: A Machine Learning Approach. <a href="https://www.medrxiv.org/content/10.1101/2021.04.19.21255584v1">Paper</a>. </li>
 </ul>
 
 <h2>Peer-Reviewed Journals</h2> 
 <ul>
+    <li>Jing, F., <b>Ye, Y. (joint first author)</b>, Zhou, Y., Ni, Y., Yan, X., Lu, Y., et al. (2023). Identification of Key Influencers for Secondary Distribution of HIV Self-Testing Kits Among Chinese Men Who Have Sex With Men: Development of an Ensemble Machine Learning Approach. Journal of Medical Internet Research, 25, e37719. <a href="https://www.jmir.org/2023/1/e37719/">Paper</a>. </li>
     <li>Zhang, Q., <b>Ye, Y. (joint first author)</b>, Zeng, D. D. (2023). Travel restrictions cannot prevent the introduction of new COVID variants. Journal of Travel Medicine. <a href="https://academic.oup.com/jtm/advance-article-abstract/doi/10.1093/jtm/taad066/7169126?login=true">Paper</a>. <a href="https://github.com/jianan0099/EffectiveDistance">Code</a>. </li>
     <li>Liu, W., Pan, J., Zhang, X., Gong, X., <b>Ye, Y.</b>, Zhao, X., et al. (2023). Cross-platform product matching based on entity alignment of knowledge graph with RAEA model. World Wide Web. 10.1007/s11280-022-01134-y. <a href="https://link.springer.com/article/10.1007/s11280-022-01134-y">Paper</a>. </li>
     <li>Cheng, W., Zhou, H., <b>Ye, Y.</b>, Chen, Y., Jing, F., Cao, Z., Zeng, D. D., & Zhang, Q. (2023). Future Trajectory of Respiratory Infections Following the COVID-19 Pandemic in Hong Kong. Chaos: An Interdisciplinary Journal of Nonlinear Science, 33(1), 013124. <a href="https://aip.scitation.org/doi/10.1063/5.0123870">Paper</a>. </li>
