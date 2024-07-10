@@ -5,7 +5,7 @@ layout: page
 
 <h2>Preprints</h2> 
 <ul>
-    <li><b>Ye, Y.</b>, Pandey, A., Bawden, C., Sumsuzzman, D.M., Rajput, R., Shoukat, A., Moghadas, S.M., & Galvani, A.P. Opportunities and Challenges of Artificial Intelligence for Epidemiological Modeling: A Scoping Review. <a href="https://doi.org/10.17605/OSF.IO/E8ZG7">OSF registration</a>. </li>
+    <li><b>Ye, Y.</b>, Pandey, A., Bawden, C., Sumsuzzman, D.M., Rajput, R., Shoukat, A., Moghadas, S.M., & Galvani, A.P. (2024). Opportunities and Challenges of Artificial Intelligence for Epidemiological Modeling: A Scoping Review. <a href="https://doi.org/10.17605/OSF.IO/E8ZG7">OSF registration</a>. </li>
     <li>Pandey, A., <b>Ye, Y.</b>, Wells, C.R., Singer, B.H., & Galvani, A.P. (2024). Estimating the lives that could be saved by expanded access to weight-loss drugs. <a href="https://www.medrxiv.org/content/10.1101/2024.06.27.24309551v1">Paper</a>. <a href="https://github.com/jianan0099/ObesityInaccessibility">Code</a>.</li>
 </ul>
 
