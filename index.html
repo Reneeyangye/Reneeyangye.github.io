@@ -1,0 +1,1304 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Yang Ye — Yale School of Public Health</title>
+  <meta name="description" content="Yang Ye, Associate Research Scientist at the Yale Center for Infectious Disease Modeling and Analysis (CIDMA). Research on infectious disease dynamics, vaccine equity, and health policy modeling." />
+
+  <!-- Favicons (files supplied separately) -->
+  <link rel="icon" href="favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+
+  <!-- Fonts: one CDN link, no build step required -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" />
+
+  <style>
+    /* ==========================================================
+       1. Tokens — palette, type, spacing
+       ========================================================== */
+    :root {
+      --bg:           #fbfaf7;
+      --text:         #1a1a1a;
+      --muted:        #555;
+      --muted-2:      #777;
+      --accent:       #00356b;
+      --accent-soft:  #e8eef5;
+      --rule:         #e6e3dc;
+      --card-bg:      #ffffff;
+      --placeholder:  #ece8df;
+      --shadow:       0 1px 2px rgba(20,20,20,.04), 0 4px 16px rgba(20,20,20,.05);
+
+      --serif: 'Source Serif 4', 'Source Serif Pro', Georgia, 'Times New Roman', serif;
+      --sans:  'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+      --maxw: 880px;
+      --pad:  24px;
+    }
+
+    /* ==========================================================
+       2. Reset / base
+       ========================================================== */
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+    }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--serif);
+      font-size: 17px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+    }
+    h1, h2, h3, h4 {
+      font-family: var(--sans);
+      font-weight: 600;
+      line-height: 1.25;
+      color: var(--text);
+      margin: 0 0 .5em;
+    }
+    h1 { font-size: 2rem; letter-spacing: -0.01em; }
+    h2 { font-size: 1.35rem; margin-top: 0; letter-spacing: -0.005em; }
+    h3 { font-size: 1.05rem; }
+    p  { margin: 0 0 1em; }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(0, 53, 107, 0.18);
+      transition: border-color .15s ease, background-color .15s ease;
+    }
+    a:hover { border-bottom-color: var(--accent); }
+    a:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+      border-radius: 2px;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      background: var(--placeholder); /* graceful fallback if image missing */
+    }
+    ul { padding-left: 1.2em; margin: 0 0 1em; }
+    li { margin: .25em 0; }
+
+    /* ==========================================================
+       3. Top nav
+       ========================================================== */
+    .topnav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(251, 250, 247, 0.92);
+      backdrop-filter: saturate(160%) blur(10px);
+      -webkit-backdrop-filter: saturate(160%) blur(10px);
+      border-bottom: 1px solid var(--rule);
+    }
+    .topnav-inner {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 12px var(--pad);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .topnav .brand {
+      font-family: var(--sans);
+      font-weight: 600;
+      font-size: .95rem;
+      color: var(--text);
+      border: none;
+    }
+    .topnav ul {
+      list-style: none;
+      padding: 0; margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px 18px;
+      font-family: var(--sans);
+      font-size: .92rem;
+    }
+    .topnav a {
+      color: var(--text);
+      border-bottom: 1px solid transparent;
+      padding: 4px 2px;
+    }
+    .topnav a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+    /* ==========================================================
+       4. Layout container
+       ========================================================== */
+    main { display: block; }
+    .container {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 0 var(--pad);
+    }
+    section.block {
+      padding: 56px 0 8px;
+      border-top: 1px solid var(--rule);
+    }
+    section.block:first-of-type { border-top: none; }
+
+    /* ==========================================================
+       5. Hero
+       ========================================================== */
+    .hero {
+      padding: 56px 0 32px;
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 36px;
+      align-items: center;
+    }
+    .hero-photo {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--rule);
+    }
+    .hero h1 { margin-bottom: .15em; }
+    .hero .title-line {
+      font-family: var(--sans);
+      color: var(--muted);
+      font-size: .98rem;
+      margin: 0 0 .25em;
+    }
+    .hero .affil {
+      font-family: var(--sans);
+      color: var(--muted);
+      font-size: .92rem;
+      margin: 0 0 1em;
+    }
+    .hero .affil a { color: var(--muted); border-bottom-color: rgba(85,85,85,.25); }
+    .hero .affil a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+    /* Icon row (also reused in footer) */
+    .icon-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      align-items: center;
+      font-family: var(--sans);
+      font-size: .9rem;
+    }
+    .icon-row a {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--text);
+      border-bottom: 1px solid transparent;
+      padding: 2px 0;
+    }
+    .icon-row a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+    .icon-row svg { flex-shrink: 0; }
+
+    /* ==========================================================
+       6. About
+       ========================================================== */
+    .bio { font-size: 1.02rem; }
+    .subhead {
+      font-family: var(--sans);
+      font-size: .82rem;
+      font-weight: 600;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 28px 0 8px;
+    }
+    .plain-list { list-style: none; padding: 0; }
+    .plain-list li {
+      padding: 6px 0;
+      border-bottom: 1px dashed var(--rule);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px 14px;
+      align-items: baseline;
+    }
+    .plain-list li:last-child { border-bottom: none; }
+    .plain-list .when {
+      font-family: var(--sans);
+      font-size: .85rem;
+      color: var(--muted-2);
+      flex-shrink: 0;
+    }
+
+
+    /* ==========================================================
+       7. Research themes — Carlson-lab-style strip
+       ========================================================== */
+    .theme {
+      display: grid;
+      grid-template-columns: 170px 1fr;
+      gap: 32px;
+      align-items: start;
+      padding: 28px 0;
+      border-bottom: 1px solid var(--rule);
+    }
+    .theme:last-child { border-bottom: none; }
+
+    /* Research section breaks out to a slightly wider canvas on large screens */
+    @media (min-width: 1100px) {
+      section#research { margin-left: -90px; margin-right: -90px; }
+    }
+    @media (min-width: 1300px) {
+      section#research { margin-left: -130px; margin-right: -130px; }
+    }
+
+    .theme-label {
+      font-family: var(--serif);
+      font-size: 1.25rem;
+      font-weight: 400;
+      line-height: 1.25;
+      color: var(--text);
+      margin: 6px 0 0;
+      position: relative;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+    .theme-label::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 12%;
+      bottom: 0;
+      height: 5px;
+      border-radius: 3px;
+      background: var(--theme-accent, #f0a48b);
+      opacity: .7;
+    }
+    .theme.t-infect  { --theme-accent: #f0a48b; } /* coral */
+    .theme.t-policy  { --theme-accent: #7fb3a6; } /* teal */
+    .theme.t-econ    { --theme-accent: #d9b970; } /* amber */
+
+    .paper-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 22px;
+    }
+    .paper-strip a {
+      display: block;
+      width: 220px;
+      flex-shrink: 0;
+      border: none;
+      transition: transform .18s ease;
+    }
+    .paper-strip a:hover { transform: translateY(-2px); }
+
+    /* PDF first-page thumbnail */
+    .pdf-thumb {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      overflow: hidden;
+      background: var(--placeholder);
+      border: 1px solid var(--rule);
+      border-radius: 4px;
+      box-shadow: var(--shadow);
+      transition: box-shadow .18s ease;
+    }
+    .paper-strip a:hover .pdf-thumb {
+      box-shadow: 0 4px 6px rgba(20,20,20,.06), 0 12px 28px rgba(20,20,20,.12);
+    }
+    .pdf-thumb img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      object-position: top center;
+      border: none;
+      background: #fff;
+    }
+
+    .paper-caption {
+      display: block;
+      margin-top: 10px;
+      font-family: var(--sans);
+      font-size: .82rem;
+      line-height: 1.4;
+      color: var(--muted);
+      text-align: left;
+    }
+    .paper-caption .venue {
+      display: block;
+      font-style: italic;
+      color: var(--muted-2);
+      margin-top: 2px;
+    }
+
+    /* ==========================================================
+       8. Media coverage grid
+       ========================================================== */
+    .media-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      margin-top: 8px;
+    }
+    .media-card {
+      background: var(--card-bg);
+      border: 1px solid var(--rule);
+      border-radius: 8px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: var(--shadow);
+      transition: transform .18s ease, box-shadow .18s ease;
+    }
+    .media-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 2px 4px rgba(20,20,20,.06), 0 8px 24px rgba(20,20,20,.08);
+    }
+    .media-thumb {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      background: var(--placeholder);
+      border-bottom: 1px solid var(--rule);
+    }
+    .media-body {
+      padding: 14px 16px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      flex: 1;
+    }
+    .media-outlet {
+      font-family: var(--sans);
+      font-weight: 600;
+      font-size: .85rem;
+      color: var(--accent);
+      letter-spacing: .01em;
+    }
+    .media-title {
+      font-size: .98rem;
+      line-height: 1.45;
+      color: var(--text);
+      border-bottom: none;
+    }
+    .media-title:hover { text-decoration: underline; text-decoration-color: var(--accent); }
+    .media-date {
+      font-family: var(--sans);
+      font-size: .8rem;
+      color: var(--muted-2);
+      margin-top: auto;
+      padding-top: 4px;
+    }
+    .media-extra {
+      font-family: var(--sans);
+      font-size: .8rem;
+    }
+
+    /* ==========================================================
+       9. Publications
+       ========================================================== */
+    .pub-year {
+      font-family: var(--sans);
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--muted);
+      margin: 26px 0 10px;
+      letter-spacing: .02em;
+    }
+    .pub {
+      display: grid;
+      grid-template-columns: 130px 1fr;
+      gap: 22px;
+      padding: 16px 0;
+      border-bottom: 1px solid var(--rule);
+      align-items: start;
+    }
+    .pub:last-child { border-bottom: none; }
+    .pub-fig {
+      width: 130px;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      border-radius: 4px;
+      border: 1px solid var(--rule);
+    }
+    .pub-fig.ph { /* placeholder column — keeps grid aligned when no figure */
+      background: transparent;
+      border: none;
+    }
+    .pub-body { font-size: .98rem; line-height: 1.55; }
+    .pub-body .me { font-weight: 700; }
+    .pub-body em { color: var(--text); }
+    .pub-links {
+      margin-top: 6px;
+      font-family: var(--sans);
+      font-size: .85rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 10px;
+    }
+    .pub-links a {
+      display: inline-block;
+      padding: 2px 8px;
+      border: 1px solid var(--rule);
+      border-radius: 999px;
+      color: var(--accent);
+      background: #fff;
+    }
+    .pub-links a:hover { background: var(--accent-soft); border-color: var(--accent); }
+    .badge {
+      display: inline-block;
+      font-family: var(--sans);
+      font-size: .78rem;
+      color: #8a6d00;
+      background: #fff7d6;
+      border: 1px solid #f0e3a3;
+      border-radius: 4px;
+      padding: 1px 6px;
+      margin-left: 6px;
+      vertical-align: 1px;
+      white-space: nowrap;
+    }
+
+    /* ==========================================================
+       10. Footer
+       ========================================================== */
+    footer {
+      margin-top: 48px;
+      padding: 36px var(--pad) 48px;
+      border-top: 1px solid var(--rule);
+      text-align: center;
+      font-family: var(--sans);
+      font-size: .9rem;
+      color: var(--muted);
+    }
+    footer .icon-row { justify-content: center; margin-top: 14px; }
+
+    /* ==========================================================
+       11. Responsive
+       ========================================================== */
+    @media (max-width: 960px) {
+      .media-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 720px) {
+      :root { --pad: 18px; }
+      body { font-size: 16.5px; }
+      h1 { font-size: 1.7rem; }
+
+      .hero {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 36px 0 24px;
+        text-align: left;
+      }
+      .hero-photo { width: 160px; height: 160px; }
+
+      .theme { grid-template-columns: 1fr; gap: 16px; padding: 24px 0; }
+      .theme-label { font-size: 1.4rem; }
+      .paper-strip a { width: calc(50% - 8px); }
+
+      .media-grid { grid-template-columns: 1fr; }
+
+      .pub { grid-template-columns: 1fr; gap: 12px; }
+      .pub-fig { width: 60%; max-width: 240px; }
+      .pub-fig.ph { display: none; }
+
+      .topnav-inner { padding: 10px var(--pad); }
+      .topnav .brand { display: none; }
+    }
+    @media (max-width: 380px) {
+      .topnav ul { font-size: .85rem; gap: 2px 12px; }
+    }
+
+    /* ==========================================================
+       Pub-figure lightbox
+       ========================================================== */
+    img.pub-fig { cursor: zoom-in; }
+
+    .pub-lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 900;
+      background: rgba(15, 15, 15, .65);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      align-items: center;
+      justify-content: center;
+      padding: var(--pad);
+    }
+    .pub-lightbox.open { display: flex; }
+
+    .pub-lightbox-inner {
+      background: var(--card-bg);
+      border-radius: 10px;
+      box-shadow: 0 8px 48px rgba(0, 0, 0, .28);
+      max-width: 620px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      padding: 28px 28px 24px;
+      position: relative;
+    }
+
+    .pub-lightbox-close {
+      position: absolute;
+      top: 12px;
+      right: 14px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: var(--muted);
+      font-size: 1.5rem;
+      line-height: 1;
+      padding: 2px 6px;
+    }
+    .pub-lightbox-close:hover { color: var(--text); }
+
+    .pub-lightbox-img {
+      display: block;
+      width: 100%;
+      border-radius: 6px;
+      margin-bottom: 18px;
+    }
+
+    .pub-lightbox-citation {
+      font-size: .9rem;
+      line-height: 1.65;
+      color: var(--text);
+      margin-bottom: 18px;
+    }
+
+    .pub-lightbox-btn {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      padding: 8px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-family: var(--sans);
+      font-size: .875rem;
+      font-weight: 500;
+    }
+    .pub-lightbox-btn:hover { opacity: .87; }
+  </style>
+</head>
+
+<body>
+
+  <!-- ==========================================================
+       Top navigation
+       ========================================================== -->
+  <nav class="topnav" aria-label="Primary">
+    <div class="topnav-inner">
+      <a href="#top" class="brand">Yang Ye</a>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#awards">Awards</a></li>
+        <li><a href="#research">Research Highlights</a></li>
+        <li><a href="#media">Media</a></li>
+        <li><a href="#publications">Selected Publications</a></li>
+        <li><a href="assets/cv.pdf" target="_blank" rel="noopener">CV</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container" id="top">
+
+    <!-- ==========================================================
+         Hero
+         ========================================================== -->
+    <header class="hero" aria-label="Profile">
+      <img class="hero-photo"
+           src="assets/images/yy_prof_pic.jpg"
+           alt="Portrait of Yang Ye"
+           width="200" height="200" />
+      <div>
+        <h1>Yang Ye</h1>
+        <p class="title-line">Associate Research Scientist, Yale School of Public Health</p>
+        <p class="affil">
+          <a href="https://ysph.yale.edu/cidma/" target="_blank" rel="noopener">Yale Center for Infectious Disease Modeling and Analysis (CIDMA)</a>
+        </p>
+        <p class="affil">Affiliated Faculty, Yale Institute for Global Health</p>
+        <div class="icon-row" aria-label="Contact links">
+          <a href="mailto:yang.ye@yale.edu" aria-label="Email">
+            <!-- envelope -->
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="3" y="5" width="18" height="14" rx="2"/>
+              <path d="M3 7l9 6 9-6"/>
+            </svg>
+            <span>Email</span>
+          </a>
+          <a href="https://scholar.google.com/citations?hl=zh-CN&user=cSyfjVkAAAAJ" target="_blank" rel="noopener" aria-label="Google Scholar">
+            <!-- mortarboard -->
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M2 9l10-5 10 5-10 5L2 9z"/>
+              <path d="M6 11v4c0 1.5 3 3 6 3s6-1.5 6-3v-4"/>
+              <path d="M22 9v5"/>
+            </svg>
+            <span>Google Scholar</span>
+          </a>
+          <a href="https://github.com/jianan0099" target="_blank" rel="noopener" aria-label="GitHub">
+            <!-- github mark -->
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+              <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.87-1.54-3.87-1.54-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.24 3.34.95.1-.74.4-1.24.72-1.53-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.18-3.08-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.18 1.18a11.05 11.05 0 015.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.58.23 2.75.11 3.04.74.8 1.18 1.82 1.18 3.08 0 4.42-2.69 5.39-5.26 5.68.41.35.78 1.05.78 2.12 0 1.53-.01 2.77-.01 3.14 0 .31.21.67.8.56C20.21 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5z"/>
+            </svg>
+            <span>GitHub</span>
+          </a>
+          <a href="https://orcid.org/0000-0003-0710-1341" target="_blank" rel="noopener" aria-label="ORCID">
+            <!-- orcid -->
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+              <path d="M12 0a12 12 0 1012 12A12 12 0 0012 0zM7.5 17.5H6V8h1.5zM6.75 6.5a.93.93 0 11.93-.93.93.93 0 01-.93.93zM18 13.16c0 2.7-1.95 4.34-4.55 4.34H9.6V8h3.85c2.95 0 4.55 1.95 4.55 4.5zm-2.25 0a2.69 2.69 0 00-2.85-2.83H11.1v5.66h1.9a2.65 2.65 0 002.75-2.83z"/>
+            </svg>
+            <span>ORCID</span>
+          </a>
+          <a href="assets/cv.pdf" target="_blank" rel="noopener" aria-label="Curriculum Vitae">
+            <!-- document -->
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+              <line x1="8" y1="13" x2="16" y2="13"/>
+              <line x1="8" y1="17" x2="13" y2="17"/>
+            </svg>
+            <span>CV</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- ==========================================================
+         About
+         ========================================================== -->
+    <section class="block" id="about" aria-labelledby="about-h">
+      <h2 id="about-h">About</h2>
+      <p class="bio">
+        👋 Hi! I am <a href="https://ysph.yale.edu/profile/yang-ye/" target="_blank" rel="noopener">Yang Ye</a>. I am an Associate Research Scientist at the
+        <a href="https://ysph.yale.edu/cidma/" target="_blank" rel="noopener">Yale Center for Infectious Disease Modeling and Analysis (CIDMA)</a>,
+        directed by Prof.
+        <a href="https://ysph.yale.edu/profile/alison-galvani/" target="_blank" rel="noopener">Alison Galvani</a>.
+        My research focuses on developing data-driven, decision-support models for infectious disease dynamics and health policy,
+        spanning three interconnected lines: (i) advancing modeling frameworks for infectious disease dynamics;
+        (ii) availability, affordability, and equity of vaccines and medications;
+        and (iii) policy modeling for population health.
+        My previous work has been published in top-tier journals such as
+        <em>Nature Human Behaviour</em>, <em>Nature Communications</em>, <em>PNAS</em>, and <em>The Lancet Obstetrics, Gynaecology, &amp; Women's Health</em>,
+        as well as featured in the press such as <em>The Washington Post</em> and <em>The Guardian</em>.
+      </p>
+      <p class="bio">
+        I earned my BS in Logistics Management from
+        <a href="http://english.hust.edu.cn/" target="_blank" rel="noopener">Huazhong University of Science and Technology</a>
+        in 2019 and my PhD in Data Science from
+        <a href="https://www.cityu.edu.hk/" target="_blank" rel="noopener">City University of Hong Kong</a>
+        in 2023, under the supervision of Prof.
+        <a href="https://datascience.hku.hk/people/qingpeng-zhang/" target="_blank" rel="noopener">Qingpeng Zhang</a>.
+        After my PhD, I joined CIDMA as a Postdoctoral Associate with Prof. Galvani.
+      </p>
+
+    </section>
+
+    <section class="block" id="experience" aria-labelledby="experience-h">
+      <h2 id="experience-h">Experience</h2>
+      <ul class="plain-list">
+        <li><span class="when">2025.08 – present</span><span>Associate Research Scientist, Yale Center for Infectious Disease Modeling and Analysis (CIDMA), Yale School of Public Health</span></li>
+        <li><span class="when">2026.02 – present</span><span>Affiliated Faculty, Yale Institute for Global Health</span></li>
+        <li><span class="when">2023.08 – 2025.07</span><span>Postdoctoral Associate, CIDMA, Yale School of Public Health</span></li>
+        <li><span class="when">2021.07 – 2021.09</span><span>Visiting Scholar, <a href="https://globalhealth.unc.edu/china/" target="_blank" rel="noopener">UNC Project-China</a></span></li>
+      </ul>
+    </section>
+
+    <section class="block" id="awards" aria-labelledby="awards-h">
+      <h2 id="awards-h">Scholarships and Awards</h2>
+      <ul class="plain-list">
+        <li><span class="when">2021, 2022</span><span>Outstanding Academic Performance Award for Research Degree Students, CityU</span></li>
+        <li><span class="when">2021, 2022</span><span>Research Tuition Scholarship, CityU</span></li>
+        <li><span class="when">2016, 2017</span><span>China National Scholarship (highest undergraduate honor in China), HUST</span></li>
+      </ul>
+    </section>
+
+    <!-- ==========================================================
+         Research themes
+         ========================================================== -->
+    <section class="block" id="research" aria-labelledby="research-h">
+      <h2 id="research-h">Research Highlights</h2>
+
+      <!-- Theme A: Infectious Diseases -->
+      <div class="theme t-infect">
+        <h3 class="theme-label">Infectious diseases</h3>
+        <div class="paper-strip">
+          <a href="https://www.nature.com/articles/s41467-024-55461-x" target="_blank" rel="noopener"
+             title="Integrating AI with mechanistic epidemiological modeling — Nature Communications (2025)">
+            <div class="pdf-thumb">
+              <img src="assets/representative%20research/infectious%20disease/ai_epi.png" alt="Integrating AI with mechanistic epidemiological modeling" loading="lazy" />
+            </div>
+            <span class="paper-caption">
+              Integrating artificial intelligence with mechanistic epidemiological modeling: a scoping review of opportunities and challenges
+              <span class="venue">Nature Communications · 2025</span>
+            </span>
+          </a>
+          <a href="https://www.nature.com/articles/s41562-022-01289-8" target="_blank" rel="noopener"
+             title="Equitable access to COVID-19 vaccines — Nature Human Behaviour (2022)">
+            <div class="pdf-thumb">
+              <img src="assets/representative%20research/infectious%20disease/vaccine_equity.png" alt="Equitable access to COVID-19 vaccines" loading="lazy" />
+            </div>
+            <span class="paper-caption">
+              Equitable access to COVID-19 vaccines makes a life-saving difference to all countries
+              <span class="venue">Nature Human Behaviour · 2022</span>
+            </span>
+          </a>
+          <a href="https://journals.aps.org/pre/abstract/10.1103/PhysRevE.102.042314" target="_blank" rel="noopener"
+             title="Heterogeneous risk perception, behavior change, and transmission — Physical Review E (2020)">
+            <div class="pdf-thumb">
+              <img src="assets/representative%20research/infectious%20disease/risk_perception.png" alt="Heterogeneous risk perception &amp; disease transmission" loading="lazy" />
+            </div>
+            <span class="paper-caption">
+              Effect of heterogeneous risk perception on information diffusion, behavior change, and disease transmission
+              <span class="venue">Physical Review E · 2020</span>
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Theme B: Health Policy -->
+      <div class="theme t-policy">
+        <h3 class="theme-label">Health policy</h3>
+        <div class="paper-strip">
+          <a href="https://www.thelancet.com/journals/lanam/article/PIIS2667-193X(25)00242-X/fulltext" target="_blank" rel="noopener"
+             title="Mortality and morbidity impact of Medicaid work requirements — Lancet Regional Health – Americas (2025)">
+            <div class="pdf-thumb">
+              <img src="assets/representative%20research/health%20policy/medicaid.png" alt="Mortality impact of Medicaid work requirements" loading="lazy" />
+            </div>
+            <span class="paper-caption">
+              Quantifying the mortality and morbidity impact of medicaid work requirements: a modeling study
+              <span class="venue">Lancet Reg. Health – Americas · 2025</span>
+            </span>
+          </a>
+          <a href="https://www.pnas.org/doi/10.1073/pnas.2412872121" target="_blank" rel="noopener"
+             title="Lives saved by expanded access to weight-loss drugs — PNAS (2024)">
+            <div class="pdf-thumb">
+              <img src="assets/representative%20research/health%20policy/obesity.png" alt="Lives saved by expanded access to weight-loss drugs" loading="lazy" />
+            </div>
+            <span class="paper-caption">
+              Estimating the lives that could be saved by expanded access to weight-loss drugs
+              <span class="venue">PNAS · 2024</span>
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Theme C: Health Economics -->
+      <div class="theme t-econ">
+        <h3 class="theme-label">Health economics</h3>
+        <div class="paper-strip">
+          <a href="https://www.pnas.org/doi/10.1073/pnas.2520871122" target="_blank" rel="noopener"
+             title="US savings on prescription drugs from international reference pricing — PNAS (2026)">
+            <div class="pdf-thumb">
+              <img src="assets/representative%20research/health%20economics/rx.png" alt="US savings from international reference pricing" loading="lazy" />
+            </div>
+            <span class="paper-caption">
+              Estimating US savings on outpatient prescription pharmaceuticals from international reference pricing
+              <span class="venue">PNAS · 2026</span>
+            </span>
+          </a>
+          <a href="https://www.thelancet.com/journals/lanogw/article/PIIS3050-5038(26)00139-1/fulltext" target="_blank" rel="noopener"
+             title="US savings from international reference pricing for pharmaceuticals crucial to women's health — Lancet Obstet. Gynaecol. Women's Health (2026)">
+            <div class="pdf-thumb">
+              <img src="assets/representative%20research/health%20economics/rx-women.png" alt="US savings from international reference pricing for women's health pharmaceuticals" loading="lazy" />
+            </div>
+            <span class="paper-caption">
+              US savings from international reference pricing for pharmaceuticals crucial to women's health
+              <span class="venue">Lancet Obstet. Gynaecol. Women's Health · 2026</span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         Media coverage
+         ========================================================== -->
+    <section class="block" id="media" aria-labelledby="media-h">
+      <h2 id="media-h">Media Coverage</h2>
+      <div class="media-grid">
+
+        <article class="media-card">
+          <img class="media-thumb" src="media/ysph_drug_pricing.jpg" alt="" loading="lazy" />
+          <div class="media-body">
+            <span class="media-outlet">Yale School of Public Health News</span>
+            <a class="media-title" href="https://ysph.yale.edu/news-article/yale-study-us-could-save-dollar184-billion-by-aligning-drug-prices-with-peer-nations/" target="_blank" rel="noopener">
+              "Yale study: U.S. could save $184 billion by aligning drug prices with peer nations."
+            </a>
+            <span class="media-date">2026.01</span>
+          </div>
+        </article>
+
+        <article class="media-card">
+          <img class="media-thumb" src="media/uf_ai_epi.jpg" alt="" loading="lazy" />
+          <div class="media-body">
+            <span class="media-outlet">UF Emerging Pathogens Institute</span>
+            <a class="media-title" href="https://epi.ufl.edu/2025/07/16/ai-and-epidemiology-can-combining-the-two-predict-pandemics/" target="_blank" rel="noopener">
+              "AI and epidemiology: Can combining the two predict pandemics?"
+            </a>
+            <span class="media-date">2025.07</span>
+          </div>
+        </article>
+
+        <article class="media-card">
+          <img class="media-thumb" src="media/cbc_vaccines.jpg" alt="" loading="lazy" />
+          <div class="media-body">
+            <span class="media-outlet">CBC / Radio-Canada</span>
+            <a class="media-title" href="https://ici.radio-canada.ca/recit-numerique/4775/covax-repartition-mondiale-vaccins-injustice" target="_blank" rel="noopener">
+              "Répartition des vaccins dans le monde."
+            </a>
+            <span class="media-extra">
+              <a href="https://www.youtube.com/watch?v=RQTOj3ulBbU" target="_blank" rel="noopener">Watch on YouTube ↗</a>
+            </span>
+            <span class="media-date">2022.10</span>
+          </div>
+        </article>
+
+        <article class="media-card">
+          <img class="media-thumb" src="media/wapo_vaccine.jpg" alt="" loading="lazy" />
+          <div class="media-body">
+            <span class="media-outlet">The Washington Post</span>
+            <a class="media-title" href="https://www.washingtonpost.com/world/2022/02/10/coronavirus-vaccine-price-mrna/" target="_blank" rel="noopener">
+              "The benefits of vaccinating the world are clear. The catch is the price tag."
+            </a>
+            <span class="media-date">2022.02</span>
+          </div>
+        </article>
+
+        <article class="media-card">
+          <img class="media-thumb" src="media/guardian_vaccine.jpg" alt="" loading="lazy" />
+          <div class="media-body">
+            <span class="media-outlet">The Guardian</span>
+            <a class="media-title" href="https://www.theguardian.com/australia-news/2022/feb/01/world-better-protected-against-covid-if-rich-nations-donated-50-of-vaccines-to-low-income-countries" target="_blank" rel="noopener">
+              "World better protected against Covid if rich nations donated 50% of vaccines to low-income countries."
+            </a>
+            <span class="media-date">2022.02</span>
+          </div>
+        </article>
+
+        <article class="media-card">
+          <img class="media-thumb" src="media/physorg_epidemic.jpg" alt="" loading="lazy" />
+          <div class="media-body">
+            <span class="media-outlet">PhysOrg / CityU Research Stories</span>
+            <a class="media-title" href="https://phys.org/news/2021-01-mathematical-epidemic-severity.html" target="_blank" rel="noopener">
+              "Mathematical model verifies a correct understanding of epidemic's severity facilitates disease control."
+            </a>
+            <span class="media-extra">
+              <a href="https://www.cityu.edu.hk/research/stories/2020/12/10/mathematical-model-verifies-correct-understanding-epidemics-severity-facilitates-disease-control" target="_blank" rel="noopener">CityU Research Stories ↗</a>
+            </span>
+            <span class="media-date">2021.01 / 2020.12</span>
+          </div>
+        </article>
+
+      </div>
+
+      <h3 class="subhead" style="margin-top:32px;">Also covered by</h3>
+      <ul class="media-text-list">
+        <li>
+          <strong>The Conversation</strong> —
+          <a href="https://theconversation.com/inteligencia-artificial-para-prevenir-y-diagnosticar-el-dengue-262017" target="_blank" rel="noopener">"Inteligencia artificial para prevenir y diagnosticar el dengue."</a>
+          <span class="when">2025.08</span>
+        </li>
+        <li>
+          <strong>Connecticut Public Radio</strong> —
+          <a href="https://www.ctpublic.org/news/2024-11-01/ozempic-wegovy-availability-cost-yale-study" target="_blank" rel="noopener">"Access to weight-loss injectables remains limited for most needy in the US, Yale study finds."</a>
+          <span class="when">2024.11</span>
+        </li>
+        <li>
+          <strong>Yale Health &amp; Medicine News</strong> —
+          <a href="https://ysph.yale.edu/news-article/expanding-access-to-weight-loss-drugs-could-save-thousands-of-lives-annually-study-finds/" target="_blank" rel="noopener">"Expanding Access to Weight-Loss Drugs Could Save Thousands of Lives A Year, Study Finds."</a>
+          <span class="when">2024.10</span>
+        </li>
+        <li>
+          <strong>Nature Asia</strong> —
+          <a href="https://www.nature.com/articles/s41562-022-01289-8/metrics" target="_blank" rel="noopener">"COVID-19: 46% vaccine redistribution best for high- and low-income countries alike."</a>
+          <span class="when">2022.02</span>
+        </li>
+        <li>
+          <strong>CityU News</strong> —
+          <a href="https://www.cityu.edu.hk/media/news/2022/02/28/enhanced-vaccine-donation-drive-can-end-covid-19-pandemic" target="_blank" rel="noopener">"Enhanced vaccine donation drive can end COVID-19 pandemic."</a>
+          <span class="when">2022.02</span>
+        </li>
+        <li>
+          <strong>Gavi</strong> —
+          <a href="https://www.gavi.org/vaccineswork/vaccine-sharing-could-protect-against-future-covid-19-waves-caused-new-variants" target="_blank" rel="noopener">"A big win-win: Vaccine sharing could protect against future COVID-19 waves."</a>
+          <span class="when">2022.01</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ==========================================================
+         Publications
+         ========================================================== -->
+    <section class="block" id="publications" aria-labelledby="pubs-h">
+      <h2 id="pubs-h">Selected Publications</h2>
+
+      <!-- 2026 -->
+      <h3 class="pub-year">2026</h3>
+
+      <article class="pub">
+        <img class="pub-fig" src="assets/papers-images/Lancet%20women%20health-2026-rx.jpg" alt="" loading="lazy" />
+        <div class="pub-body">
+          <span class="me">Ye, Y.</span>, Pandey, A., Fitzpatrick, M. C., &amp; Galvani, A. P.
+          (2026). US savings from international reference pricing for pharmaceuticals crucial to women's health.
+          <em>The Lancet Obstetrics, Gynaecology, &amp; Women's Health</em>, 2(6), e490–e491.
+          <div class="pub-links">
+            <a href="https://www.thelancet.com/journals/lanogw/article/PIIS3050-5038(26)00139-1/fulltext" target="_blank" rel="noopener">Paper</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="pub">
+        <img class="pub-fig" src="assets/papers-images/pnas-2026-mmr.jpg" alt="" loading="lazy" />
+        <div class="pub-body">
+          Wells, C. R., Pandey, A., <span class="me">Ye, Y.</span>, Bawden, C., Giglio, R., Wong, C., Wang, V., Cipriano, C., Ayaz, L., Röst, G., Moghadas, S. M., Fitzpatrick, M. C., Singer, B. H., &amp; Galvani, A. P.
+          (2026). The health and economic repercussions of declining MMR coverage in the United States.
+          <em>Proceedings of the National Academy of Sciences</em>, 123(17), e2605971123.
+          <div class="pub-links">
+            <a href="https://www.pnas.org/doi/10.1073/pnas.2605971123" target="_blank" rel="noopener">Paper</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="pub">
+        <img class="pub-fig" src="assets/papers-images/pnas-2022-Rx.jpg" alt="" loading="lazy" />
+        <div class="pub-body">
+          <span class="me">Ye, Y.</span>, Pandey, A., Fitzpatrick, M. C., Potter-Schwartz, L., Bawden, C., Bilori, B., Singer, B. H., &amp; Galvani, A. P.
+          (2026). Estimating US savings on outpatient prescription pharmaceuticals from international reference pricing.
+          <em>Proceedings of the National Academy of Sciences</em>, 123(2) e2520871122.
+          <span class="badge">🌟 Press Highlights</span>
+          <div class="pub-links">
+            <a href="https://www.pnas.org/doi/10.1073/pnas.2520871122" target="_blank" rel="noopener">Paper</a>
+            <a href="https://usirp.cidma.us/" target="_blank" rel="noopener">Interactive dashboard</a>
+	    <a href="https://ysph-dsde.github.io/resources-page/Pages/More-Info-Pages/Freely-Accessible/Yale%20Link%20Drop.html" target="_blank" rel="noopener">Yale School of Public Health DSDE resources</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 2025 -->
+      <h3 class="pub-year">2025</h3>
+
+      <article class="pub">
+        <img class="pub-fig" src="assets/papers-images/Lancet Reg Health Am-2025-medicaid.jpg" alt="" loading="lazy" />
+        <div class="pub-body">
+          Pandey, A., <span class="me">Ye, Y.</span>, Bawden, C., Singer, B. H., &amp; Galvani, A. P.
+          (2025). Quantifying the mortality and morbidity impact of medicaid work requirements: a modeling study.
+          <em>The Lancet Regional Health – Americas</em>, 51, 101232.
+          <div class="pub-links">
+            <a href="https://www.thelancet.com/journals/lanam/article/PIIS2667-193X(25)00242-X/fulltext" target="_blank" rel="noopener">Paper</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="pub">
+        <img class="pub-fig" src="assets/papers-images/Nat Commun-2025-ai.jpg" alt="" loading="lazy" />
+        <div class="pub-body">
+          <span class="me">Ye, Y.</span>, Pandey, A., Bawden, C., Sumsuzzman, D. M., Rajput, R., Shoukat, A., et al.
+          (2025). Integrating artificial intelligence with mechanistic epidemiological modeling: a scoping review of opportunities and challenges.
+          <em>Nature Communications</em>, 16(1), 1–18.
+          <span class="badge">🌟 Editors' Highlights</span>
+          <div class="pub-links">
+            <a href="https://www.nature.com/articles/s41467-024-55461-x" target="_blank" rel="noopener">Paper</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="pub">
+        <img class="pub-fig" src="assets/papers-images/BMC ID-2025-review.jpg" alt="" loading="lazy" />
+        <div class="pub-body">
+          Sumsuzzman, D. M., <span class="me">Ye, Y.</span>, Wang, Z., Pandey, A., Langley, J. M., Galvani, A. P., &amp; Moghadas, S. M.
+          (2025). Impact of disease severity, age, sex, comorbidity, and vaccination on secondary attack rates of SARS-CoV-2: a global systematic review and meta-analysis.
+          <em>BMC Infectious Diseases</em>, 25(1), 215.
+          <div class="pub-links">
+            <a href="https://link.springer.com/article/10.1186/s12879-025-10610-5" target="_blank" rel="noopener">Paper</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 2024 -->
+      <h3 class="pub-year">2024</h3>
+
+      <article class="pub">
+        <img class="pub-fig" src="assets/papers-images/pnas-2024-obesity.jpg" alt="" loading="lazy" />
+        <div class="pub-body">
+          Pandey, A., <span class="me">Ye, Y.</span>, Wells, C. R., Singer, B. H., &amp; Galvani, A. P.
+          (2024). Estimating the lives that could be saved by expanded access to weight-loss drugs.
+          <em>PNAS</em>, 121(43), e2412872121.
+          <div class="pub-links">
+            <a href="https://www.pnas.org/doi/10.1073/pnas.2412872121" target="_blank" rel="noopener">Paper</a>
+            <a href="https://github.com/jianan0099/ObesityInaccessibility" target="_blank" rel="noopener">Code</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="pub">
+        <img class="pub-fig" src="assets/papers-images/hssc-2024-sanction.jpg" alt="" loading="lazy" />
+        <div class="pub-body">
+          <span class="me">Ye, Y.</span>, Zhang, Q.
+          (2024). The futility of economic sanctions in a globalized and interdependent world: a data-driven game theoretical study.
+          <em>Humanities and Social Sciences Communications</em>, 11, 1034.
+          <div class="pub-links">
+            <a href="https://www.nature.com/articles/s41599-024-03518-z" target="_blank" rel="noopener">Paper</a>
+            <a href="https://github.com/jianan0099/sanctions" target="_blank" rel="noopener">Code</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="pub">
+        <img class="pub-fig" src="assets/papers-images/Proc A-2024-epieco.jpg" alt="" loading="lazy" />
+        <div class="pub-body">
+          <span class="me">Ye, Y.</span>, Cao, Z., Zeng, D. D., &amp; Zhang, Q.
+          (2024). Supply chain loss from easing COVID-19 restrictions: an evolutionary economic-epidemiological modelling study.
+          <em>Proceedings of the Royal Society A</em>, 480, 20230803.
+          <span class="badge">🌟 Cover feature</span>
+          <div class="pub-links">
+            <a href="https://royalsocietypublishing.org/doi/full/10.1098/rspa.2023.0803" target="_blank" rel="noopener">Paper</a>
+            <a href="https://github.com/jianan0099/EcoEpi" target="_blank" rel="noopener">Code</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 2023 -->
+      <h3 class="pub-year">2023</h3>
+
+      <article class="pub">
+        <img class="pub-fig" src="assets/papers-images/jmir-2023-hiv.png" alt="" loading="lazy" />
+        <div class="pub-body">
+          Jing, F., <span class="me">Ye, Y.</span> (joint first author), Zhou, Y., Ni, Y., Yan, X., Lu, Y., et al.
+          (2023). Identification of Key Influencers for Secondary Distribution of HIV Self-Testing Kits Among Chinese Men Who Have Sex With Men: Development of an Ensemble Machine Learning Approach.
+          <em>Journal of Medical Internet Research</em>, 25, e37719.
+          <div class="pub-links">
+            <a href="https://www.jmir.org/2023/1/e37719" target="_blank" rel="noopener">Paper</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="pub">
+        <img class="pub-fig" src="assets/papers-images/JTM-2023-Travel restrictions.jpeg" alt="" loading="lazy" />
+        <div class="pub-body">
+          Zhang, Q., <span class="me">Ye, Y.</span> (joint first author), Zeng, D. D.
+          (2023). Travel restrictions cannot prevent the introduction of new COVID variants.
+          <em>Journal of Travel Medicine</em>.
+          <div class="pub-links">
+            <a href="https://academic.oup.com/jtm/article-lookup/doi/10.1093/jtm/taad066" target="_blank" rel="noopener">Paper</a>
+            <a href="https://github.com/jianan0099/EffectiveDistance" target="_blank" rel="noopener">Code</a>
+          </div>
+        </div>
+      </article>
+
+
+      <article class="pub">
+        <img class="pub-fig" src="assets/papers-images/chaos-2023-hk.jpeg" alt="" loading="lazy" />
+        <div class="pub-body">
+          Cheng, W., Zhou, H., <span class="me">Ye, Y.</span>, Chen, Y., Jing, F., Cao, Z., Zeng, D. D., &amp; Zhang, Q.
+          (2023). Future Trajectory of Respiratory Infections Following the COVID-19 Pandemic in Hong Kong.
+          <em>Chaos</em>, 33(1), 013124.
+          <div class="pub-links">
+            <a href="https://pubs.aip.org/aip/cha/article/33/1/013124/2877562/Future-trajectory-of-respiratory-infections" target="_blank" rel="noopener">Paper</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 2022 -->
+      <h3 class="pub-year">2022</h3>
+
+      <article class="pub">
+        <img class="pub-fig" src="assets/papers-images/tcss-2022-msm.gif" alt="" loading="lazy" />
+        <div class="pub-body">
+          <span class="me">Ye, Y.</span>, Ni, K., Jing, F., Zhou, Y., Tang, W., &amp; Zhang, Q.
+          (2022). Model-Informed Targeted Network Interventions on Social Networks Among Men Who Have Sex With Men in Zhuhai, China.
+          <em>IEEE Transactions on Computational Social Systems</em>.
+          <div class="pub-links">
+            <a href="https://ieeexplore.ieee.org/abstract/document/9940227" target="_blank" rel="noopener">Paper</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="pub">
+        <img class="pub-fig" src="assets/papers-images/Adv Theory Simul-2021-PPE .jpg" alt="" loading="lazy" />
+        <div class="pub-body">
+          <span class="me">Ye, Y.</span>, Zhang, Q., Cao, Z., Chen, F. Y., Yan, H., Stanley, H. E., &amp; Zeng, D. D.
+          (2022). Impacts of Export Restrictions on the Global Personal Protective Equipment Trade Network During COVID-19.
+          <em>Advanced Theory and Simulations</em>, 5(4), 2100352.
+          <span class="badge">🌟 Inner-cover feature</span>
+          <div class="pub-links">
+            <a href="https://advanced.onlinelibrary.wiley.com/doi/10.1002/adts.202100352" target="_blank" rel="noopener">Paper</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="pub">
+        <img class="pub-fig" src="assets/papers-images/nhb-2022-vaccine.jpg" alt="" loading="lazy" />
+        <div class="pub-body">
+          <span class="me">Ye, Y.</span>, Zhang, Q., Wei, X., Cao, Z., Yuan, H. Y., &amp; Zeng, D. D.
+          (2022). Equitable access to COVID-19 vaccines makes a life-saving difference to all countries.
+          <em>Nature Human Behaviour</em>, 6(2), 207–216.
+          <span class="badge">🌟 Cover feature</span>
+          <div class="pub-links">
+            <a href="https://www.nature.com/articles/s41562-022-01289-8" target="_blank" rel="noopener">Paper</a>
+            <a href="https://github.com/jianan0099/VacEquity" target="_blank" rel="noopener">Code</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="pub">
+        <img class="pub-fig" src="assets/papers-images/Philos Trans A-2022-hiv.png" alt="" loading="lazy" />
+        <div class="pub-body">
+          Jing, F., <span class="me">Ye, Y.</span> (joint first author), Zhou, Y., Zhou, H., Xu, Z., Lu, Y., et al.
+          (2022). Modelling the geographical spread of HIV among MSM in Guangdong, China: a metapopulation model considering the impact of pre-exposure prophylaxis.
+          <em>Philosophical Transactions of the Royal Society A</em>, 380(2214), 20210126.
+          <div class="pub-links">
+            <a href="https://royalsocietypublishing.org/rsta/article/380/2214/20210126/111973/Modelling-the-geographical-spread-of-HIV-among-MSM" target="_blank" rel="noopener">Paper</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 2021 -->
+      <h3 class="pub-year">2021</h3>
+
+      <article class="pub">
+        <img class="pub-fig" src="assets/papers-images/epl-2021-vaccine.jpg" alt="" loading="lazy" />
+        <div class="pub-body">
+          <span class="me">Ye, Y.</span>, Zhang, Q., Cao, Z., &amp; Zeng, D. D.
+          (2021). Optimal vaccination program for two infectious diseases with cross-immunity spreading on a network.
+          <em>Europhysics Letters</em>, 133(4), 46001.
+          <span class="badge">🌟 Editor's pick</span>
+          <div class="pub-links">
+            <a href="https://iopscience.iop.org/article/10.1209/0295-5075/133/46001" target="_blank" rel="noopener">Paper</a>
+            <a href="https://github.com/jianan0099/VAC_" target="_blank" rel="noopener">Code</a>
+          </div>
+        </div>
+      </article>
+
+
+      <!-- 2020 -->
+      <h3 class="pub-year">2020</h3>
+
+      <article class="pub">
+        <img class="pub-fig" src="assets/papers-images/pre-2020-risk.png" alt="" loading="lazy" />
+        <div class="pub-body">
+          <span class="me">Ye, Y.</span>, Zhang, Q., Ruan, Z., Cao, Z., Xuan, Q., &amp; Zeng, D. D.
+          (2020). Effect of heterogeneous risk perception on information diffusion, behavior change, and disease transmission.
+          <em>Physical Review E</em>, 102(4), 042314.
+          <div class="pub-links">
+            <a href="https://journals.aps.org/pre/abstract/10.1103/PhysRevE.102.042314" target="_blank" rel="noopener">Paper</a>
+          </div>
+        </div>
+      </article>
+
+    </section>
+  </main>
+
+  <!-- ==========================================================
+       Footer
+       ========================================================== -->
+  <footer>
+    <div>Yang Ye © 2026</div>
+    <div class="icon-row" aria-label="Contact links">
+      <a href="mailto:yang.ye@yale.edu" aria-label="Email">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="3" y="5" width="18" height="14" rx="2"/>
+          <path d="M3 7l9 6 9-6"/>
+        </svg>
+        <span>Email</span>
+      </a>
+      <a href="https://scholar.google.com/citations?hl=zh-CN&user=cSyfjVkAAAAJ" target="_blank" rel="noopener" aria-label="Google Scholar">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M2 9l10-5 10 5-10 5L2 9z"/>
+          <path d="M6 11v4c0 1.5 3 3 6 3s6-1.5 6-3v-4"/>
+          <path d="M22 9v5"/>
+        </svg>
+        <span>Google Scholar</span>
+      </a>
+      <a href="https://github.com/jianan0099" target="_blank" rel="noopener" aria-label="GitHub">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+          <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.87-1.54-3.87-1.54-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.24 3.34.95.1-.74.4-1.24.72-1.53-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.18-3.08-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.18 1.18a11.05 11.05 0 015.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.58.23 2.75.11 3.04.74.8 1.18 1.82 1.18 3.08 0 4.42-2.69 5.39-5.26 5.68.41.35.78 1.05.78 2.12 0 1.53-.01 2.77-.01 3.14 0 .31.21.67.8.56C20.21 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5z"/>
+        </svg>
+        <span>GitHub</span>
+      </a>
+      <a href="https://orcid.org/0000-0003-0710-1341" target="_blank" rel="noopener" aria-label="ORCID">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+          <path d="M12 0a12 12 0 1012 12A12 12 0 0012 0zM7.5 17.5H6V8h1.5zM6.75 6.5a.93.93 0 11.93-.93.93.93 0 01-.93.93zM18 13.16c0 2.7-1.95 4.34-4.55 4.34H9.6V8h3.85c2.95 0 4.55 1.95 4.55 4.5zm-2.25 0a2.69 2.69 0 00-2.85-2.83H11.1v5.66h1.9a2.65 2.65 0 002.75-2.83z"/>
+        </svg>
+        <span>ORCID</span>
+      </a>
+    </div>
+  </footer>
+
+
+  <!-- Pub-figure lightbox -->
+  <div class="pub-lightbox" id="pubLightbox" role="dialog" aria-modal="true" aria-label="Paper figure">
+    <div class="pub-lightbox-inner">
+      <button class="pub-lightbox-close" id="pubLightboxClose" aria-label="Close">&times;</button>
+      <img class="pub-lightbox-img" id="pubLightboxImg" src="" alt="" />
+      <p class="pub-lightbox-citation" id="pubLightboxCitation"></p>
+      <a class="pub-lightbox-btn" id="pubLightboxLink" href="#" target="_blank" rel="noopener">View Full Paper</a>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var lightbox  = document.getElementById('pubLightbox');
+      var lbImg     = document.getElementById('pubLightboxImg');
+      var lbCite    = document.getElementById('pubLightboxCitation');
+      var lbLink    = document.getElementById('pubLightboxLink');
+      var lbClose   = document.getElementById('pubLightboxClose');
+
+      function openLightbox(img) {
+        var article = img.closest('article.pub');
+
+        // Larger image
+        lbImg.src = img.src;
+        lbImg.alt = img.alt;
+
+        // Citation text: pub-body contents minus the links div
+        var bodyClone = article.querySelector('.pub-body').cloneNode(true);
+        var linksEl   = bodyClone.querySelector('.pub-links');
+        if (linksEl) linksEl.remove();
+        lbCite.textContent = bodyClone.textContent.replace(/\s+/g, ' ').trim();
+
+        // Publisher link — first <a> inside .pub-links whose href isn't '#'
+        var paperAnchor = article.querySelector('.pub-links a[href]:not([href="#"])');
+        if (paperAnchor) {
+          lbLink.href = paperAnchor.href;
+          lbLink.style.display = 'inline-block';
+        } else {
+          lbLink.style.display = 'none';
+        }
+
+        lightbox.classList.add('open');
+        lbClose.focus();
+      }
+
+      function closeLightbox() {
+        lightbox.classList.remove('open');
+        lbImg.src = '';
+      }
+
+      // Wire up every real pub-fig image
+      document.querySelectorAll('img.pub-fig').forEach(function (img) {
+        img.addEventListener('click', function () { openLightbox(img); });
+      });
+
+      lbClose.addEventListener('click', closeLightbox);
+
+      // Click on backdrop (but not the inner card) closes it
+      lightbox.addEventListener('click', function (e) {
+        if (e.target === lightbox) closeLightbox();
+      });
+
+      // Escape key closes it
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && lightbox.classList.contains('open')) closeLightbox();
+      });
+    })();
+  </script>
+
+</body>
+</html>
